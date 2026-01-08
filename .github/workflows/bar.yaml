@@ -1,10 +1,10 @@
-name: foo
+name: bar
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - "foo/**"
+      - "bar/**"
 jobs:
   do:
     runs-on: ubuntu-latest
@@ -15,6 +15,6 @@ jobs:
           ${{ toJson(github) }}
           EOF
 
-      - name: Run foo script
-        run: echo "Running foo script..."
+      - name: Run bar script
+        run: echo "Running bar script..."
 
