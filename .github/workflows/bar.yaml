@@ -18,3 +18,6 @@ jobs:
       - name: Run bar script
         run: echo "Running bar script..."
 
+      - name: event again
+        run: |-
+          jq --sort-keys < ${{ github.event_path }}
